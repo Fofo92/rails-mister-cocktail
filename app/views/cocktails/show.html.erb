@@ -4,6 +4,8 @@
     <li class='list-group-item'>
       <%= dose.description %>
       <%= dose.ingredient.name %>
+      <%= link_to 'Delete ingredient', dose_path(dose), method: :delete,
+        data: {confirm: 'Are you sure?'} %>
     </li>
   <% end %>
 </ul>
