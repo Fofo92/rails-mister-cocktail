@@ -1,7 +1,12 @@
 
-<h1>My best cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/fofo921/image/upload/v1608057706/y4pmsiqdsgfhv6nqov8z.jpg);">
+  <div class="container">
+    <h1>My best cocktails to <strong>creative people</strong>!</h1>
+    <p>Change your life by coding and harvesting new skills.</p>
+  </div>
+</div>
 <ul>
-  <%= @cocktails.each do |cocktail| %>
+  <% @cocktails.each do |cocktail| %>
     <li>
       <%= cocktail.name %>
       <%= link_to 'See more', cocktail_path(cocktail) %>
