@@ -5,18 +5,32 @@
     <p>Change your life by coding and harvesting new skills.</p>
   </div>
 </div>
-<ul>
+<div class="flex-container">
   <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= cocktail.name %>
+    <div class="flex-item">
       <% if cocktail.photo.attached? %>
-        <%= cl_image_tag cocktail.photo.key, height: 150, width: 150, crop: :fill %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= cl_image_path cocktail.photo.key, height: 150, width: 150, crop: :fill %>')">
       <% else %>
-        <%= cl_image_tag 'default_cocktail', height: 150, width: 150, crop: :fill %>
+        <div class="card-category">
       <% end %>
+          <%= cocktail.name %>
+          </div>
       <%= link_to 'See more', cocktail_path(cocktail) %>
-    </li>
+    </div>
   <% end %>
-</ul>
-
+</div>
 <%= link_to 'Add a new cocktail', new_cocktail_path %>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
