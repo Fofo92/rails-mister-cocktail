@@ -3,6 +3,8 @@
   <div class="container">
     <h1>My best cocktails to <strong>creative people</strong>!</h1>
     <p>Change your life by coding and harvesting new skills.</p>
+    <p></p>
+    <%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-gradient' %>
   </div>
 </div>
 <div class="flex-container">
@@ -25,7 +27,6 @@
     </div>
   <% end %>
 </div>
-<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-gradient btn-sm' %>
 
 <div class="footer">
   <div class="footer-links">
