@@ -16,14 +16,16 @@
       <% else %>
         <div class="card-category" style= "background-image: height: 150, width: 200">
       <% end %>
-          <%= cocktail.name %>
-          </div>
-      <%= link_to 'See more', cocktail_path(cocktail), class: 'btn btn-gradient btn-sm'%>
-      <% if !cocktail.photo.attached? %>
-        <%= link_to 'Add a picture', edit_cocktail_path(cocktail), class: 'btn btn-gradient btn-sm' %>
-      <% else %>
-        <%= link_to 'Change picture', edit_cocktail_path(cocktail), class: 'btn btn-gradient btn-sm' %>
-      <% end %>
+      <%= cocktail.name %>
+      </div>
+      <div style="text-align: center">
+        <%= link_to 'See more', cocktail_path(cocktail), class: 'btn btn-gradient btn-sm'%>
+        <% if !cocktail.photo.attached? %>
+          <%= link_to 'Add a picture', edit_cocktail_path(cocktail), class: 'btn btn-gradient btn-sm' %>
+        <% else %>
+          <%= link_to 'Change picture', edit_cocktail_path(cocktail), class: 'btn btn-gradient btn-sm' %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
